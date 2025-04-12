@@ -13,6 +13,16 @@ Exemplo: /home/rodrigo/projetos/bets-api/assets/rules/openapi3.spectral.yaml
   info-contact: error
   operation-tags: error
 
+# Run Spectral
+      - uses: stoplightio/spectral-action@latest
+
+- name: Install Global Dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm -g install @stoplight/prism-cli newman
+
+Usamos o http mocking prism que subirá as rotas para o teste do exemplo do contrato
+ prism mock assets/api-docs/bets-api.yaml 
+ 
 3 - Postman
 
 4 - ArgoCD
