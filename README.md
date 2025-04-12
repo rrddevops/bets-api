@@ -13,7 +13,8 @@ Exemplo: /home/rodrigo/projetos/bets-api/assets/rules/openapi3.spectral.yaml
   info-contact: error
   operation-tags: error
 
-# Run Spectral
+/home/rodrigo/projetos/bets-api/.github/workflows/api-cycle.yaml
+ Run Spectral
       - uses: stoplightio/spectral-action@latest
 
 - name: Install Global Dependencies
