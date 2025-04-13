@@ -26,6 +26,42 @@ Usamos o http mocking prism que subirá as rotas para o teste do exemplo do cont
  
 3 - Postman
 
+Bets - Bets API
+
+❏ Contract Tests / bets
+↳ Create Bet
+  POST http://127.0.0.1:4010/bets [1:50:56 PM] › [HTTP SERVER] post /bets ℹ  info      Request received
+[1:50:56 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[1:50:56 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[1:50:56 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[1:50:56 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 201
+[1:50:56 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "201"
+[201 Created, 418B, 65ms]
+  ✓  [POST]::/bets - Status code is 2xx
+  ✓  [POST]::/bets - Content-Type is application/json
+  ✓  [POST]::/bets - Response has JSON Body
+  ✓  [POST]::/bets - Schema is valid
+
+┌─────────────────────────┬──────────────────┬──────────────────┐
+│                         │         executed │           failed │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│              iterations │                1 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│                requests │                1 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│            test-scripts │                1 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│      prerequest-scripts │                0 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│              assertions │                4 │                0 │
+├─────────────────────────┴──────────────────┴──────────────────┤
+│ total run duration: 140ms                                     │
+├───────────────────────────────────────────────────────────────┤
+│ total data received: 118B (approx)                            │
+├───────────────────────────────────────────────────────────────┤
+│ average response time: 65ms [min: 65ms, max: 65ms, s.d.: 0µs] │
+└───────────────────────────────────────────────────────────────┘
+
 4 - ArgoCD
 
 Contains code for Bets Application (demo purpose)
