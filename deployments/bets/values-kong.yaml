@@ -49,7 +49,8 @@ ingress:
   enabled: true
   annotations:
     kubernetes.io/ingress.class: "kong"
-    konghq.com/override: bets-do-not-preserve-host
+    konghq.com/strip-path: "true"
+    konghq.com/preserve-host: "false"
     konghq.com/plugins: prometheus-bets,rl-by-header,bets-correlation-id,oidc-bets
 
   hosts:
