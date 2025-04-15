@@ -47,18 +47,16 @@ kong:
 
 ingress:
   enabled: true
+  className: kong
   annotations:
-    kubernetes.io/ingress.class: "kong"
     konghq.com/strip-path: "true"
     konghq.com/preserve-host: "false"
     konghq.com/plugins: prometheus-bets,rl-by-header,bets-correlation-id,oidc-bets
-
   hosts:
-    - paths:
+    - host: bets.local  # ou o domínio que deseja usar
+      paths:
         - path: /api/bets
-          backend:
-            serviceName: bets
-            servicePort: 9999
+          pathType: Prefix
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
