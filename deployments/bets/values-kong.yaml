@@ -53,7 +53,7 @@ ingress:
     konghq.com/preserve-host: "false"
     konghq.com/plugins: prometheus-bets,rl-by-header,bets-correlation-id,oidc-bets
   hosts:
-    - host: bets.local  # ou o domínio que deseja usar
+    - host: bets.local
       paths:
         - path: /api/bets
           pathType: Prefix
